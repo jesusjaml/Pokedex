@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: orangered;
+    color: white;
+}
+
+.card {
+    list-style: none;
+    text-align: center;
+    padding: 4rem;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.card:hover {
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20%{
+        transform: translatey(-0.6rem);
+    }
+    40%{
+        transform: translatey(0rem);
+    }
+    80%{
+        transform: translatey(-0.2rem);
+    }
+    100%{
+        transform: translatey(0rem);
+    }
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: normal;
+}
+
+.card-subtitle {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.card-image {
+    height: 18rem;
+}
+
+#pokedex {
+    display: grid;
+    /* Formato de columnas donde el ancho de cada columna sera 320px crecera de acuerdo al ancho de pantalla */
+    /* Nos dara un efecto responsive donde se iran acomodando siempre que tenga espacio suficiente  */    
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.container {
+    padding: 4rem;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 4rem;
+    font-size: 5.4rem;
+}
